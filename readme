@@ -1,0 +1,46 @@
+Funny solution to LeetCode problem "27. Remove Element" 
+
+1. description
+See https://leetcode.com/problems/remove-element/description/?envType=study-plan-v2&envId=top-interview-150 or below.
+
+Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. 
+The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
+Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:
+  (1) Change the array nums such that the first k elements of nums contain the elements which are not equal to val. 
+  (2) The remaining elements of nums are not important as well as the size of nums.
+    Return k.
+
+Example 1:
+Input: nums = [3,2,2,3], val = 3
+Output: 2, nums = [2,2,_,_]
+Explanation: Your function should return k = 2, with the first two elements of nums being 2.
+It does not matter what you leave beyond the returned k (hence they are underscores).
+
+Constraints:
+    0 <= nums.length <= 100
+    0 <= nums[i] <= 50
+    0 <= val <= 100
+
+2. Solution
+The problem is quite easy (and marked "easy" in LeetCode). There exists a couple of solutions. 
+I found a funny one exploiting the contraints that all elements of array "nums" are non-negative and 
+the c++ function "sort". Elements equal to "val" are set to "-1". Afterwards, "nums" is sorted descendingly.
+
+3. Time complexity
+The process assigning "-1" is of O(n) (n being the length of "nums"). The c++ "sort" has O(n*log(n)). 
+Therefore, it's O(n*log(n)).
+
+4. Results
+Submited to LeetCode and passed all tests with 0ms runtime (beats 100.00% of users with c++) (despite 
+the high complexity, which looks funny and pleasant) and 11.02MB memory (beats 37.87% of users 
+with c++) (consumed by "sort"?).
+
+5. Toublesooting
+This is shared for fun with absolutely no warranty. Please report any bugs to my mailbox.
+
+6. Author
+Yiyi HUANG (yhuangcm@connect.ust.hk)
+
+7. License
+GPL-3.0
+
